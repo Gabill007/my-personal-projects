@@ -10,18 +10,6 @@
 </head>
 
 <body>
-	<h1>Simple Database App</h1>
-
-<ul>
-	<li>
-		<a href="create.php"><strong>Create</strong> - add a user</a>
-	</li>
-	<li>
-		<a href="read.php"><strong>Read</strong> - find a user</a>
-	</li>
-</ul>
-
-
+<h1>Simple Database App</h1>
 </body>
-
 </html>
