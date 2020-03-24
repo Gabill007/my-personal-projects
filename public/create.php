@@ -7,10 +7,11 @@
 	<input type="text" name="lastname" id="lastname"/>
 	<label for="email">Email Address</label>
 	<input type="email" name="email" id="email">
-	<label for ="age">Date of birth</label>
+	<label for ="birthday">Date of birth</label>
 	<input type="Date" name="birthday" id="birthday"/>
 	<label for="location">Location</label>
-	<input type="text" name="location" id="location"/>
+	<input type="text" name="location" id="location"/><br>
+	<input type="submit" name="submit" value="Submit"/>
 
 </form>
 
