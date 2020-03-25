@@ -1,4 +1,6 @@
 <?php include "template/header.php"; ?>
+<?php if(isset($_POST['submit'])){}?>
+
 
 <form method="POST" >
 	<label for = "firstname">First Name</label>

@@ -2,6 +2,7 @@
 require "config.php";
 $sql = file_get_contents("data/init.sql");
 try {
+
 	$connection = new PDO("mysql:host=$host", $username,$password,$options);
 	$sql;
 	$connection->exec($sql);
@@ -9,8 +10,7 @@ try {
 }
 
 catch(PDOException $error){
-	echo $sql.$error->getMessage();
+	echo $sql." ".$error->getMessage();
 
 }
-
 
