@@ -6,7 +6,7 @@ CREATE DATABASE test;
  firstname VARCHAR (30) NOT NULL,
  lastname VARCHAR (30) NOT NULL ,
  email VARCHAR (50) NOT NULL,
- brithday DATE,
+ birthday DATE,
  location VARCHAR (50),
  date TIMESTAMP
  );

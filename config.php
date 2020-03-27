@@ -3,7 +3,7 @@
 /**
  * Configuration for database connection
  */
-//$sql = file_get_contents("data/init.sql");
+
 $host = "localhost";
 $username = "root";
 $password = "";
