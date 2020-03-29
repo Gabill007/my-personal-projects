@@ -1,10 +1,10 @@
-<?php include "template/header.php"; ?>
+
 <?php
 var_dump($_POST);
-
+require ("../config.php");
 if(isset($_POST['submit'])){
 
-	require ("../config.php");
+
 
 	try {
 		$connection = new PDO($dsn,$username,$password,$options);
@@ -15,7 +15,9 @@ if(isset($_POST['submit'])){
 		$location = $_POST['location'];
 
 		$sql="INSERT INTO `users` (firstname, lastname, email, birthday, location) VALUES (:$firstname, :$lastname, :$email, :$birthday, :$location)";
-	$connection->exec($sql);
+	$statement = $connection->prepare($sql);
+	$statement->execute($sql);
+		//$connection->exec($sql);
 	echo "Successful!";
 	}
 	catch(PDOException $e){
@@ -24,8 +26,13 @@ if(isset($_POST['submit'])){
 }
 
 ?>
+<?php include "template/header.php"; ?>
+<?php if(isset($_POST['submit'])&&$statement){
+	echo $_POST['firstname']." successfully added";
+}  ?>
 
-<form method="POST" >
+<h2>Add a User</h2>
+<form method="POST">
 	<label for = "firstname">First Name</label>
 	<input type="text" name ="firstname" id ="firstname"/>
 
