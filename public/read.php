@@ -27,6 +27,7 @@ if (isset($_POST['submit'])) {
 
 <?php include "template/header.php"; ?>
 <?php
+
 if (isset($_POST['submit'])) {
 	if($result && $statement->rowCount() > 0) { ?>
 		<h2>Results</h2>
